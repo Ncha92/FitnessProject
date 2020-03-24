@@ -61,40 +61,6 @@ const RegisterInputComponent: React.FC = () => {
                     </Form.Group>
 
                     <Form.Group controlId= "register">
-                        <Form.Label>Current Wieght</Form.Label>
-                        <Form.Control type="number" placeholder="Current Wieght" required/>
-                    </Form.Group>
-
-                    <Form.Group controlId= "register">
-                        <Form.Label>Current Hieght</Form.Label>
-                        <Form.Control type="number" placeholder="Current Hieght" required/>
-                    </Form.Group>
-
-                    <Form.Group controlId= "register">
-                        <Form.Label>Age</Form.Label>
-                        <Form.Control type="number" placeholder="Age" required/>
-                    </Form.Group>
-
-                    <Form.Group controlId="WorkoutChoices">
-                        <Form.Label>Select Workout options</Form.Label>
-                        <Form.Control as= "select" required>
-                            <option>Strength Training</option>
-                            <option>Wieght Loss Training</option>
-                            <option>Balance Training</option>
-                        </Form.Control>
-                    </Form.Group>
-
-                    <Form.Group controlId= "register">
-                        <Form.Label>Total Sit-ups</Form.Label>
-                        <Form.Control type="number" placeholder="Total Sit-ups" required/>
-                    </Form.Group>
-
-                    <Form.Group controlId= "register">
-                        <Form.Label>Total Pull-ups</Form.Label>
-                        <Form.Control type="number" placeholder="Total Pull-ups" required/>
-                    </Form.Group>
-
-                    <Form.Group controlId= "register">
                         <Form.Label>Max Bench</Form.Label>
                         <Form.Control type="number" placeholder="Max Bench" required/>
                     </Form.Group>
@@ -103,22 +69,6 @@ const RegisterInputComponent: React.FC = () => {
                         <Form.Label>Max Squat</Form.Label>
                         <Form.Control type="number" placeholder="Max Squat" required/>
                     </Form.Group>
-
-                    <Form.Group controlId= "register">
-                        <Form.Label>Daily Calories intake</Form.Label>
-                        <Form.Control type="number" placeholder="Total Calories Intake" required/>
-                    </Form.Group>
-
-                    <Form.Group controlId="WorkoutChoices">
-                        <Form.Label>Select Cardio options</Form.Label>
-                        <Form.Control as= "select" required>
-                            <option>Walking</option>
-                            <option>Running</option>
-                            <option>Biking</option>
-                            <option>Swimming</option>
-                        </Form.Control>
-                    </Form.Group>
-            
 
                 <Button 
                 className = "btn btn-primary btn-block"
