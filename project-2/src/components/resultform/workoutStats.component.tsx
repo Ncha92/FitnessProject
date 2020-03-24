@@ -49,9 +49,9 @@ const WorkoutStatHistory: React.FC = () => {
                  </button>
             </Link>
             
-            <Link to="/workouts">
+            <Link to="/workoutPyramid">
                  <button>
-                    Workout Stat Form
+                    Workout Pyramid
                  </button>
             </Link> 
 
