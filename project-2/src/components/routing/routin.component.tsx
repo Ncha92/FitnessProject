@@ -6,6 +6,7 @@ import HomeScreenComponent from '../userinterface/homescreen.component';
 import WorkoutComponent from '../userinterface/statsForm.component';
 import WorkoutStatHistory from '../resultform/workoutStats.component';
 import BenchPyramidComponent from '../pyramids/workoutBenchPyramid.component'
+import UserModelComponent from '../model/userModelBench.component';
 
 const RoutingComponent: React.FC = () => {
 
@@ -15,7 +16,7 @@ const RoutingComponent: React.FC = () => {
                 <Route path= "/login" component={LoginComponent}></Route>
                 <Route path= "/register" component={RegisterInputComponent}></Route>
                 <Route path= "/home" component={HomeScreenComponent}></Route>
-                <Route path= "/workoutPyramid" component={BenchPyramidComponent}></Route>
+                <Route path= "/workoutPyramid" component={UserModelComponent}></Route>
                 <Route path= "/statrecords" component={WorkoutStatHistory}></Route>
                 {/* <Redirect path= "/" to= "/login"></Redirect> */}
             </Switch>
