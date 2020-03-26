@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import BenchPyramidComponent from '../pyramids/workoutBenchPyramid.component';
+import Axios from 'axios';
+import InputComponent from '../userinterface/input.component';
 /*
     I want to create a parent and child component
     The parent component will hold state
@@ -9,15 +11,14 @@ import BenchPyramidComponent from '../pyramids/workoutBenchPyramid.component';
 */
 
 export interface UserData {
-    userId: number;
+    id: string;
     firstname: string;
     lastname: string;
     username: string;
     email: string;
     password: string;
-    gender: string;
-    maxBench: number;
-    maxSquat: number;
+    maxbench: number;
+    maxsquat: number;
   
   
   }
@@ -25,28 +26,55 @@ export interface UserData {
 const UserModelComponent: React.FC = () => {
 
     const [userData, setUserData] = useState<UserData>({
-        userId: 0,
+        id: "0",
         firstname: 'Justin',
         lastname: 'Pennington',
         username: 'justapenn',
         email: 'justapenn@flixnet',
         password: 'password',
-        gender: 'male',
-        maxBench: 225,
-        maxSquat: 270
+        maxbench: 225,
+        maxsquat: 270
       });
     
       const [userArr, setUserArr] = useState<UserData[]>([userData]);
+
+      const updateUser = (newValue: any) =>
+      {
+          // props.updateReimbursemnt(newValue);
+          setUserData(newValue);
+      }
+  
+      const userSubmitReceived = (str: string): void=> {
+      const url = `http://localhost:8080/users`;
+
+      Axios.get(url)
+      .then(response => {
+        
+        setUserData(response.data)
+
+        // const id = response.data.id;
+        // const firstname = response.data.firstname;
+        // const lastname = response.data.lastname;
+        // const username = response.data.username;
+        // const email = response.data.email;
+        // const password = response.data.password;
+        // const maxbench = response.data.maxbench;
+        // const maxsquat = response.data.maxsquat;
+      }).catch(err => {
+        console.log(err);
+      });
+    }
+
+
+
     return (
         <React.Fragment>
-            
+
+            <InputComponent
+            userSubmitReceived={(str: string) => userSubmitReceived(str)}
+            ></InputComponent>
             <BenchPyramidComponent
                 userData={userData}
-                // Wrapping multiple values into an object
-                // name={name, valueA, valueB}
-
-                // Passing an object to props
-                // name=data
             ></BenchPyramidComponent>
         </React.Fragment>
     );
