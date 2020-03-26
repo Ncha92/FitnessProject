@@ -14,11 +14,13 @@ public class PersonController {
     @Autowired
     private PersonService personService;
 
+    @CrossOrigin(origins = "http://localhost:3000")
     @GetMapping("/users")
     public List<Person> getAllUser() {
         return personService.getAllUsers();
     }
 
+    @CrossOrigin(origins = "http://localhost:3000")
     @GetMapping("/users/{id}")
     public Optional<Person> getByUserId(@PathVariable("id") String id){
         return personService.getByUserId(id);

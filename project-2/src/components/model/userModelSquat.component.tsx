@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import BenchPyramidComponent from '../pyramids/workoutBenchPyramid.component';
 import Axios from 'axios';
 import InputComponent from '../userinterface/input.component';
+import SquatPyramidComponent from '../pyramids/workoutSquatPyramid.component';
 /*
     I want to create a parent and child component
     The parent component will hold state
@@ -23,7 +24,7 @@ export interface UserData {
   
   }
 
-const UserModelBenchComponent: React.FC = () => {
+const UserModelSquatComponent: React.FC = () => {
 
     const [userData, setUserData] = useState<UserData>({
         id: "0",
@@ -73,11 +74,11 @@ const UserModelBenchComponent: React.FC = () => {
             <InputComponent
             userSubmitReceived={(str: string) => userSubmitReceived(str)}
             ></InputComponent>
-            <BenchPyramidComponent
+            <SquatPyramidComponent
                 userData={userData}
-            ></BenchPyramidComponent>
+            ></SquatPyramidComponent>
         </React.Fragment>
     );
 }
 
-export default UserModelBenchComponent;
+export default UserModelSquatComponent;

@@ -16,9 +16,15 @@ const HomeScreenComponent: React.FC = () => {
                  </button>
             </Link>
 
-            <Link to="/workoutPyramid">
+            <Link to="/benchworkoutPyramid">
                  <button>
-                    Workout Pyramid
+                    Bench Pyramid Generator
+                 </button>
+            </Link> 
+
+            <Link to="/squatworkoutPyramid">
+                 <button>
+                    Squat Pyramid Generator
                  </button>
             </Link> 
           
