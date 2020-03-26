@@ -20,16 +20,22 @@ public class Person {
 
     private String password;
 
+    private int maxbench;
+
+    private int maxsquat;
+
     public Person() {
     }
 
-    public Person(String id, String firstname, String lastname, String username, String email, String password) {
+    public Person(String id, String firstname, String lastname, String username, String email, String password, int maxbench, int maxsquat) {
         this.id = id;
         this.firstname = firstname;
         this.lastname = lastname;
         this.username = username;
         this.email = email;
         this.password = password;
+        this.maxbench = maxbench;
+        this.maxsquat = maxsquat;
     }
 
     public String getId() {
@@ -38,6 +44,22 @@ public class Person {
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    public int getMaxbench() {
+        return maxbench;
+    }
+
+    public void setMaxbench(int maxbench) {
+        this.maxbench = maxbench;
+    }
+
+    public int getMaxsquat() {
+        return maxsquat;
+    }
+
+    public void setMaxsquat(int maxsquat) {
+        this.maxsquat = maxsquat;
     }
 
     public String getFirstname() {
