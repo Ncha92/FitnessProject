@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 const NavibarComponent: React.FC = () => {
 
     return (
-        <section id = "header-container">
             <nav>
                 <ul>
                     <li><Link to="/login">Login</Link></li>
@@ -12,7 +11,6 @@ const NavibarComponent: React.FC = () => {
                     <li><Link to="/home">Home</Link></li>
                 </ul>
             </nav>
-        </section>
     
     )
 }

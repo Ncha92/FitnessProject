@@ -11,9 +11,12 @@ import UserModelBenchComponent from '../model/userModelBench.component';
 import UserModelSquatComponent from '../model/userModelSquat.component';
 
 const RoutingComponent: React.FC = () => {
-
+    
     return(
+
         <React.Fragment>
+            <div className="auth-wrapper">
+                <div className="auth-inner">
             <Switch>
                 <Route path= "/login" component={LoginComponent}></Route>
                 <Route path= "/register" component={RegisterInputComponent}></Route>
@@ -23,7 +26,8 @@ const RoutingComponent: React.FC = () => {
                 <Route path= "/statrecords" component={WorkoutStatHistory}></Route>
                 {/* <Redirect path= "/" to= "/login"></Redirect> */}
             </Switch>
-
+            </div>
+                </div>
         </React.Fragment>
     )
 }

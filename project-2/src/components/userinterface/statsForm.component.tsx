@@ -71,12 +71,7 @@ const StatFormComponent: React.FC = () => {
                         <Form.Label>Total Pull-up</Form.Label>
                         <Form.Control type="number" placeholder=""/>
                     </Form.Group>
-
-                <Form.Group controlId= "Workout-form">
-                    <Form.Label>Daily Cardio Miles</Form.Label>
-                    <Form.Control type="number" placeholder=""/>
-                </Form.Group>
-
+                    
                     <button 
                     type="submit"
                     className= "btn btn-primary btn-block"

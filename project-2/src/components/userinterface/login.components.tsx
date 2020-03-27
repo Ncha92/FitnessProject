@@ -75,15 +75,13 @@ const LoginComponent: React.FC<LogProps> = (props) => {
             <div className = "LoginContainer">
                 <Form>
                     <Form.Group controlId= "LoginCred">
-                        <Form.Label>Email</Form.Label>
-                        <Form.Control type="email" placeholder="Enter Email"
+                        <Form.Control type="email" placeholder="Email"
                         onChange ={handleInputEmail}
                         onKeyPress = {handleKeyDown}/>
                     </Form.Group>
 
                     <Form.Group controlId= "LoginCred">
-                        <Form.Label>Password</Form.Label>
-                        <Form.Control type="password" placeholder="Enter Password"
+                        <Form.Control type="password" placeholder="Password"
                         onChange = {handleInputPassword}
                         onKeyPress = {handleKeyDown}/>
                     </Form.Group>
